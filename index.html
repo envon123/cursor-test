@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>底部导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #999;
+            text-decoration: none;
+        }
+
+        .nav-item.active {
+            color: #4CAF50;
+        }
+
+        .icon {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+
+        .label {
+            font-size: 11px;
+        }
+
+        .main-content {
+            padding: 80px 20px 20px;
+            text-align: left;
+            margin-bottom: 60px;
+        }
+
+        .main-image {
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .action-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            min-width: 100px;
+        }
+
+        .nav-bar {
+            /* 修改导航栏样式 */
+            background-color: #f8f8f8;
+            height: 50px;
+        }
+
+        .nav-item {
+            color: #999;
+        }
+
+        .nav-item.active {
+            color: #4CAF50;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .action-button.outline {
+            background-color: transparent;
+            color: #666;
+            border: 1px solid #666;
+            border-radius: 20px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 44px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom: 1px solid #eee;
+            z-index: 100;
+        }
+
+        .header-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+
+        .nav-bar .icon {
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="icon.png" alt="AI问卷" class="header-icon">
+        AI问卷优选
+    </div>
+    <div class="main-content">
+        <h1 class="title">开启私人订制购物新篇</h1>
+        <p class="subtitle">更具精准配购的第一份惊喜！</p>
+        <img src="1.png" alt="欢迎图片" class="main-image">
+        <div class="button-group">
+            <button class="action-button outline">全部产品</button>
+            <button class="action-button">开始免费测评</button>
+        </div>
+    </div>
+
+    <nav class="nav-bar">
+        <a href="#" class="nav-item active">
+            <span class="icon">🏠</span>
+            <span class="label">首页</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="icon">📋</span>
+            <span class="label">报告</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="icon">🛒</span>
+            <span class="label">商城</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="icon">👤</span>
+            <span class="label">我的</span>
+        </a>
+    </nav>
+</body>
+</html>
